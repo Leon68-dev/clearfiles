@@ -30,11 +30,11 @@ namespace clearfiles
                 if (confirmAuto != "Y")
                 {
                     Console.Write("Для удаления нажмите 'Y'");
-                    
                     var confirm = Console.ReadKey();
                     Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                     Console.Write("        ");
                     Console.WriteLine();
+
                     if (confirm.KeyChar == 121 || confirm.KeyChar == 89)
                         deleteFiles(filePaths);
                 }
@@ -48,11 +48,7 @@ namespace clearfiles
             {
                 Console.Write("Файлы не найдены!");
             }
-
-            return;
-
         }
-
 
         static void deleteFiles(string[] filePaths)
         {
